@@ -1,0 +1,31 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Registrar Ingreso</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="form-group">
+        <mat-label>
+          <i class="material-icons">directions_car</i> Tipo de Vehículo
+        </mat-label>
+        <select matNativeControl [(ngModel)]="vehiculo.tipoVehiculo" required>
+          <option value="carro">Carro</option>
+          <option value="motocicleta">Motocicleta</option>
+          <option value="bicicleta">Bicicleta</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <mat-label>
+          <i class="material-icons">local_shipping</i> Placa
+        </mat-label>
+        <input matInput [(ngModel)]="vehiculo.placa" placeholder="Ingrese la Placa" required />
+      </div>
+
+      <button mat-raised-button color="primary" (click)="registrarIngreso()">
+        <i class="material-icons">add</i> Registrar Ingreso
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

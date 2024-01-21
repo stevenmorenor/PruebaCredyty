@@ -1,0 +1,43 @@
+<div class="container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Obtener Listado de Vehículos</mat-card-title>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Fecha y Hora de Inicio</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="fechaInicio" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+  
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Fecha y Hora de Fin</mat-label>
+            <input matInput [matDatepicker]="pickerFin" [(ngModel)]="fechaFin" />
+            <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+            <mat-datepicker #pickerFin></mat-datepicker>
+          </mat-form-field>
+        </div>
+  
+        <button mat-raised-button color="primary" (click)="buscarVehiculos()">Buscar Vehículos</button>
+  
+        <div *ngIf="vehiculos.length > 0; else noVehiculos">
+          <h3>Listado de Vehículos:</h3>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let vehiculo of vehiculos">
+              {{ vehiculo.nombre }} - {{ vehiculo.modelo }} - {{ vehiculo.ano }}
+            </li>
+          </ul>
+        </div>
+  
+        <ng-template #noVehiculos>
+          <p>No hay vehículos en el rango de fechas especificado.</p>
+        </ng-template>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

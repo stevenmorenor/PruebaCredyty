@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+}
+
+mat-card {
+  width: 500px; 
+  text-align: center;
+}
+
+mat-card-title {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.list-group {
+  padding: 0;
+}
+
+.list-group-item {
+  margin-bottom: 5px;
+}
+.btn-blue {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-blue:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}

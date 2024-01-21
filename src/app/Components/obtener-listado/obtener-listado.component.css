@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+  
+mat-card {
+    width: 500px; 
+    text-align: center;
+}
+
+mat-card-title {
+    text-align: center;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+  
+button {
+    margin-top: 10px;
+}
+  
+.list-group {
+    padding: 0;
+}
+  
+.list-group-item {
+    margin-bottom: 5px;
+}
